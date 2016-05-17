@@ -1,0 +1,13 @@
+Package: dsDangerClient
+Maintainer: <datashield-research@bristol.ac.uk>
+Author: <datashield-research@bristol.ac.uk>
+Version: 0.0.1
+License: GPL-3
+Title: Client-side DataSHIELD functions - DANGER for development only
+Description: Client-side DataSHIELD functions - returns server side objects - only use in development environment
+Imports:
+    opal,
+    fields
+Suggests:
+    testthat
+RoxygenNote: 5.0.1
