@@ -1,20 +1,16 @@
 #' 
-#' @title Computes the statistical mean of a given vector
-#' @description This function is similar to the R function \code{mean}.
-#' @details It is a wrapper for the server side function.
-#' @param x a character, the name of a numerical vector
-#' @param type a character which represents the type of analysis to carry out. 
-#' If \code{type} is set to 'combine', a global mean is calculated 
-#' if \code{type} is set to 'split', the mean is calculated separately for each study.
-#' @param datasources a list of opal object(s) obtained after login in to opal servers;
-#' these objects hold also the data assign to R, as \code{data frame}, from opal datasources.
-#' @return a numeric
-#' @author Gaye A., Isaeva I.
-#' @seealso \code{ds.quantileMean} to compute quantiles.
-#' @seealso \code{ds.summary} to generate the summary of a variable.
+#' @title Returns any object to the client side
+#' @description DANGER - special function to allow analysts to look at server side objects
+#' on the client side
+#' @details this function is not meant to be used anywhere except in a development environment
+#' It is designed to give the analyst access to the data (i.e. a route through the DataSHIELD
+#' defences)
+#' @param x a character, the name of a server side object
+#' @return the server side object requested
+#' @author Bishop T.
 #' @export
 #' 
-ds.danger = function(x=NULL, type='combine', datasources=NULL){
+ds.danger = function(x=NULL, datasources=NULL){
   
   # if no opal login details are provided look for 'opal' objects in the environment
   if(is.null(datasources)){
@@ -22,7 +18,7 @@ ds.danger = function(x=NULL, type='combine', datasources=NULL){
   }
   
   if(is.null(x)){
-    stop("Please provide the name of the input vector!", call.=FALSE)
+    stop("Please provide the name of the object required!", call.=FALSE)
   }
   
   # the input variable might be given as column table (i.e. D$x)
@@ -41,45 +37,10 @@ ds.danger = function(x=NULL, type='combine', datasources=NULL){
   
   # call the internal function that checks the input object is of the same class in all studies.
   typ <- checkClass(datasources, x)
+
+  cally <- paste0("dangerDS(", x, ")")
+  object <- opal::datashield.aggregate(datasources, as.symbol(cally))
   
-  # the input object must be a numeric or an integer vector
-  if(typ != 'integer' & typ != 'numeric'){
-    stop("The input object must be an integer or a numeric vector.", call.=FALSE)
-  }
-  
-  # number of studies
-  num.sources <- length(datasources)
-  
-  cally <- paste0("meanDS(", x, ")")
-  mean.local <- opal::datashield.aggregate(datasources, as.symbol(cally))
-  
-  cally <- paste0("NROW(", x, ")")
-  length.local <- opal::datashield.aggregate(datasources, cally)
-  
-  # get the number of entries with missing values
-  cally <- paste0("numNaDS(", x, ")")
-  numNA.local <- opal::datashield.aggregate(datasources, cally)
-  
-  if (type=='split') {
-    return(mean.local)
-  } else if (type=='combine') {
-    length.total = 0
-    sum.weighted = 0
-    mean.global  = NA
+    return(object)
     
-    for (i in 1:num.sources){
-      if ((!is.null(length.local[[i]])) & (length.local[[i]]!=0)) {
-        completeLength <- length.local[[i]]-numNA.local[[i]]
-        length.total = length.total+completeLength
-        sum.weighted = sum.weighted+completeLength*mean.local[[i]]
-      }
-    }
-    
-    mean.global = sum.weighted/length.total
-    return(list("Global mean"=mean.global))
-    
-  } else{
-    stop('Function argument "type" has to be either "combine" or "split"')
-  }
-  
 }
