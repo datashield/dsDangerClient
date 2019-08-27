@@ -8,7 +8,7 @@ Description: Client-side DataSHIELD functions - returns server side objects - on
 Imports:
     opal,
     fields,
-    dsBase
+    dsBaseClient
 Suggests:
     testthat
 RoxygenNote: 6.1.1
