@@ -3,7 +3,7 @@ ds.DANGERvarsEXTRACT<-function(x.name=NULL, y.name=NULL, z.name=NULL,
 
 # details are provided look for 'opal' objects in the environment
   if(is.null(datasources)){
-    datasources <- dsBase:::findLoginObjects()
+    datasources <- dsBaseClient:::findLoginObjects()
   }
 
 if(is.null(x.name)){
