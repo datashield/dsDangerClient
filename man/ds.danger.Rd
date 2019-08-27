@@ -8,6 +8,16 @@ ds.danger(x = NULL, datasources = NULL)
 }
 \arguments{
 \item{x}{a character, the name of a server side object}
+
+\item{datasources}{specifies the particular opal object(s) to use. If the <datasources>
+argument is not specified the default set of opals will be used. The default opals
+are called default.opals and the default can be set using the function
+{ds.setDefaultOpals}. If the <datasources> is to be specified, it should be set without
+inverted commas: e.g. datasources=opals.em or datasources=default.opals. If you wish to
+apply the function solely to e.g. the second opal server in a set of three,
+the argument can be specified as: e.g. datasources=opals.em[2].
+If you wish to specify the first and third opal servers in a set you specify:
+e.g. datasources=opals.em[c(1,3)]}
 }
 \value{
 the server side object requested
