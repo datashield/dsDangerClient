@@ -4,10 +4,11 @@ Author: DataSHIELD Developers <datashield@newcastle.ac.uk>
 Version: 5.1.0
 License: GPL-3
 Title: Client-side DataSHIELD functions - DANGER for development only
-Description: Client-side DataSHIELD functions - returns server side objects - only use in development environment
+Description: Client-side DataSHIELD functions - returns server side objects - only use in development environment.
 Imports:
     opal,
-    fields
+    fields,
+    dsBase
 Suggests:
     testthat
 RoxygenNote: 6.1.1

@@ -3,7 +3,7 @@ ds.DANGERseedEXTRACT <- function(datasources=NULL){
   
   # details are provided look for 'opal' objects in the environment
   if(is.null(datasources)){
-    datasources <- findLoginObjects()
+    datasources <- dsBase:::findLoginObjects()
   }
   
   calltext <- call('DANGERseedEXTRACTDS')
