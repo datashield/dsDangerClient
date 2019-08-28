@@ -50,6 +50,6 @@ ds.danger = function(x=NULL, datasources=NULL){
   cally <- paste0("dangerDS(", x, ")")
   object <- opal::datashield.aggregate(datasources, as.symbol(cally))
   
-    return(object)
+  return(object)
     
 }
