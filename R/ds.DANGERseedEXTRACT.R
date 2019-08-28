@@ -1,4 +1,6 @@
-
+#'
+#' @export
+#'
 ds.DANGERseedEXTRACT <- function(datasources=NULL){
   
   # details are provided look for 'opal' objects in the environment
