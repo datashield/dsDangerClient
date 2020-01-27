@@ -5,7 +5,7 @@ ds.DANGERprint<-function(x.name=NULL, y.name=NULL, z.name=NULL, datasources=NULL
 
   # details are provided look for 'opal' objects in the environment
   if(is.null(datasources)){
-    datasources <- dsBaseClient:::findLoginObjects()
+    datasources <- DSI::datashield.connections_find()
   }
 
   if(is.null(x.name)){
@@ -21,7 +21,7 @@ ds.DANGERprint<-function(x.name=NULL, y.name=NULL, z.name=NULL, datasources=NULL
 
   calltext <- call('DANGERprintDS', x.name, y.name, z.name)
 
-  extract.vars <- opal::datashield.aggregate(datasources, calltext)
+  extract.vars <- DSI::datashield.aggregate(datasources, calltext)
 
 
   return(extract.vars=extract.vars)

@@ -5,7 +5,7 @@ ds.DANGERvarsEXTRACT<-function(x.name=NULL, y.name=NULL, z.name=NULL, u.name=NUL
 
   # details are provided look for 'opal' objects in the environment
   if(is.null(datasources)){
-    datasources <- dsBaseClient:::findLoginObjects()
+    datasources <- DSI::datashield.connections_find()
   }
 
   if(is.null(x.name)){
@@ -20,7 +20,7 @@ ds.DANGERvarsEXTRACT<-function(x.name=NULL, y.name=NULL, z.name=NULL, u.name=NUL
 
   calltext <- call('DANGERvarsEXTRACTDS', x.name, y.name, z.name, u.name, v.name, w.name)
 
-  extractVARS <- opal::datashield.aggregate(datasources, calltext)
+  extractVARS <- DSI::datashield.aggregate(datasources, calltext)
 
   numsources<-length(datasources)
 
