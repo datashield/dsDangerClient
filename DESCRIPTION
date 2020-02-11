@@ -6,9 +6,9 @@ License: GPL-3
 Title: Client-side DataSHIELD functions - DANGER for development only
 Description: Client-side DataSHIELD functions - returns server side objects - only use in development environment.
 Imports:
-    opal,
     fields,
-    dsBaseClient
+    dsBaseClient,
+    DSI
 Suggests:
     testthat
 RoxygenNote: 6.1.1

@@ -5,7 +5,7 @@ ds.DANGERplot<-function(x.name=NULL, y.name=NULL, z.name=NULL, datasources=NULL)
 
   # details are provided look for 'opal' objects in the environment
   if(is.null(datasources)){
-    datasources <- dsBaseClient:::findLoginObjects()
+    datasources <- DSI::datashield.connections_find()
   }
 
   if(is.null(x.name)){
@@ -21,7 +21,7 @@ ds.DANGERplot<-function(x.name=NULL, y.name=NULL, z.name=NULL, datasources=NULL)
 
   calltext <- call('DANGERvarsEXTRACTDS', x.name, y.name, z.name)
 
-  extractDF <- opal::datashield.aggregate(datasources, calltext)
+  extractDF <- DSI::datashield.aggregate(datasources, calltext)
 
   numsources<-length(datasources)
 
