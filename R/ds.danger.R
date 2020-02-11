@@ -23,7 +23,7 @@ ds.danger = function(x=NULL, datasources=NULL){
   
   # if no opal login details are provided look for 'opal' objects in the environment
   if(is.null(datasources)){
-    datasources <- dsBaseClient:::findLoginObjects()
+    datasources <- DSI::datashield.connections_find()
   }
   
   if(is.null(x)){
@@ -48,7 +48,7 @@ ds.danger = function(x=NULL, datasources=NULL){
   typ <- dsBaseClient:::checkClass(datasources, x)
 
   cally <- paste0("dangerDS(", x, ")")
-  object <- opal::datashield.aggregate(datasources, as.symbol(cally))
+  object <- DSI::datashield.aggregate(datasources, as.symbol(cally))
   
   return(object)
     
