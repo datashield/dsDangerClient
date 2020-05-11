@@ -41,7 +41,7 @@ ds.DANGERpassPARSER <- function(transmit.object=NULL, datasources=NULL){
   }
   
   # call the server side function that does the job
-  calltext <- DSI::call("DANGERpassPARSERDS",transmit.object=transmit.object)
+  calltext <- call("DANGERpassPARSERDS",transmit.object=transmit.object)
   output <- DSI::datashield.aggregate(datasources, calltext)
   
   return(output)
