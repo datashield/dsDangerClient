@@ -29,7 +29,7 @@ ds.DANGERlistcode <- function(package.name, function.name, datasources = NULL)
         stop('Error: Parameter "function.name" is not a character vector', call.=FALSE);
 
     # call the server side function
-    calltext <- call("DANGERlistcodeDS", quote(package.name), quote(function.name))
+    calltext <- call("DANGERlistcodeDS", package.name, function.name)
 
     output <- DSI::datashield.aggregate(datasources, calltext)
 
