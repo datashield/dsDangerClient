@@ -42,7 +42,7 @@ ds.DANGERdfEXTRACT<-function(dataframeName=NULL, extract.study.specific=TRUE, ex
     extractDF[[r]]<-cbind(extractDF[[r]])
   }
 
-  cat("list[[1]] = study.specific\nlist[[2]] = all.studies\n\n")
+  # cat("list[[1]] = study.specific\nlist[[2]] = all.studies\n\n")
 
   if(extract.study.specific==TRUE&&extract.all.studies.combined==TRUE)
   {
