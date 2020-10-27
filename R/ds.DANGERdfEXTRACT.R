@@ -5,7 +5,7 @@ ds.DANGERdfEXTRACT<-function(dataframeName=NULL, extract.study.specific=TRUE, ex
 
   # details are provided look for 'opal' objects in the environment
   if(is.null(datasources)){
-    datasources <- dsBaseClient:::findLoginObjects()
+    datasources <- DSI::datashield.connections_find()
   }
 
   if(is.null(dataframeName)){
@@ -18,7 +18,7 @@ ds.DANGERdfEXTRACT<-function(dataframeName=NULL, extract.study.specific=TRUE, ex
 
   calltext <- call('DANGERdfEXTRACTDS', dataframeName)
 
-  extractDF <- opal::datashield.aggregate(datasources, calltext)
+  extractDF <- DSI::datashield.aggregate(datasources, calltext)
 
 
   numsources<-length(datasources)
@@ -42,7 +42,7 @@ ds.DANGERdfEXTRACT<-function(dataframeName=NULL, extract.study.specific=TRUE, ex
     extractDF[[r]]<-cbind(extractDF[[r]])
   }
 
-  cat("list[[1]] = study.specific\nlist[[2]] = all.studies\n\n")
+  # cat("list[[1]] = study.specific\nlist[[2]] = all.studies\n\n")
 
   if(extract.study.specific==TRUE&&extract.all.studies.combined==TRUE)
   {
