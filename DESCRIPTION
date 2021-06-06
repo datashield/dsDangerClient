@@ -7,7 +7,8 @@ Title: Client-side DataSHIELD functions - DANGER for development only
 Description: Client-side DataSHIELD functions - returns server side objects - only use in development environment.
 Imports:
     fields,
-    DSI
+    DSI,
+    dplyr
 Suggests:
     testthat
 RoxygenNote: 7.1.1
