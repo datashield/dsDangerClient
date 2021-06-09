@@ -1,6 +1,10 @@
-#'
+#' @title ds.DANGERseedEXTRACT
+#' @description DANGER function
+#' @details DANGER function
+#' @param datasources specifies the particular 'connection object(s)' to use.
+#' @return DANGER function
+#' @author DataSHIELD Development Team
 #' @export
-#'
 ds.DANGERseedEXTRACT <- function(datasources=NULL){
   
   # details are provided look for 'opal' objects in the environment
