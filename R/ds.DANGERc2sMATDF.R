@@ -139,7 +139,7 @@ colclass.vector<-rep("",ncols.scalar)
 for(k in 1:ncols.scalar)
 {
 colclass.vector[k]<-class(mdata.mat[,k])
-	if(class(mdata)=="data.frame")
+	if(all(c("data.frame") %in% class(mdata)))
 	{
 	colclass.vector[k]<-class(mdata[,k])
 	}

@@ -6,9 +6,9 @@ License: GPL-3
 Title: Client-side DataSHIELD functions - DANGER for development only
 Description: Client-side DataSHIELD functions - returns server side objects - only use in development environment.
 Imports:
-    fields,
     DSI,
     dplyr
 Suggests:
     testthat
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1
+Encoding: UTF-8
