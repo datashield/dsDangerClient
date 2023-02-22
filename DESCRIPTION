@@ -1,7 +1,7 @@
 Package: dsDangerClient
 Maintainer: DataSHIELD Developers <datashield@newcastle.ac.uk>
 Author: DataSHIELD Developers <datashield@newcastle.ac.uk>
-Version: 6.2.1-01
+Version: 6.3.0
 License: GPL-3
 Title: Client-side DataSHIELD functions - DANGER for development only
 Description: Client-side DataSHIELD functions - returns server side objects - only use in development environment.
@@ -10,5 +10,5 @@ Imports:
     dplyr
 Suggests:
     testthat
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
 Encoding: UTF-8
