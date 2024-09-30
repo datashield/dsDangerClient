@@ -1,48 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>/404.html</loc>
-  </url>
-  <url>
-    <loc>/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>/authors.html</loc>
-  </url>
-  <url>
-    <loc>/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ds.DANGERc2sMATDF.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ds.DANGERdfEXTRACT.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ds.DANGERdmtEXTRACT.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ds.DANGERlistcode.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ds.DANGERpassPARSER.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ds.DANGERplot.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ds.DANGERprint.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ds.DANGERsearch.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ds.DANGERseedEXTRACT.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ds.DANGERvarsEXTRACT.html</loc>
-  </url>
-  <url>
-    <loc>/reference/index.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>/404.html</loc></url>
+<url><loc>/LICENSE.html</loc></url>
+<url><loc>/authors.html</loc></url>
+<url><loc>/index.html</loc></url>
+<url><loc>/reference/ds.DANGERc2sMATDF.html</loc></url>
+<url><loc>/reference/ds.DANGERdfEXTRACT.html</loc></url>
+<url><loc>/reference/ds.DANGERdmtEXTRACT.html</loc></url>
+<url><loc>/reference/ds.DANGERlistcode.html</loc></url>
+<url><loc>/reference/ds.DANGERpassPARSER.html</loc></url>
+<url><loc>/reference/ds.DANGERplot.html</loc></url>
+<url><loc>/reference/ds.DANGERprint.html</loc></url>
+<url><loc>/reference/ds.DANGERsearch.html</loc></url>
+<url><loc>/reference/ds.DANGERseedEXTRACT.html</loc></url>
+<url><loc>/reference/ds.DANGERvarsEXTRACT.html</loc></url>
+<url><loc>/reference/index.html</loc></url>
 </urlset>
+
