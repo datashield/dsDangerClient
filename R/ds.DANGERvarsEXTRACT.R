@@ -1,6 +1,22 @@
-#'
+#' @title ds.DANGERvarsEXTRACT
+#' @description DANGER function
+#' @details DANGER function
+#' @param x.name character string naming first variable to be copied
+#' from serverside to clientside
+#' @param y.name character string naming second variable to be copied
+#' from serverside to clientside
+#' @param z.name character string naming third variable to be copied
+#' from serverside to clientside
+#' @param u.name character string naming fourth variable to be copied
+#' from serverside to clientside
+#' @param v.name character string naming fifth variable to be copied
+#' from serverside to clientside
+#' @param w.name character string naming sixth variable to be copied
+#' from serverside to clientside
+#' @param datasources specifies the particular 'connection object(s)' to use.
+#' @return DANGER function
+#' @author DataSHIELD Development Team
 #' @export
-#'
 ds.DANGERvarsEXTRACT<-function(x.name=NULL, y.name=NULL, z.name=NULL, u.name=NULL, v.name=NULL, w.name=NULL, datasources=NULL) {
 
   # details are provided look for 'opal' objects in the environment

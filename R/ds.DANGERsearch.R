@@ -2,8 +2,8 @@
 #' @title lists all R environments on serverside
 #' @description creates a list of the names of all of the serverside
 #' R environments
-#' @details Clientside function {ds.DANGERsearch} calling serverside aggregate
-#' function {DANGERsearchDS}. Only argument to be specified is datasouces.
+#' @details Clientside function \code{ds.DANGERsearch} calling serverside aggregate
+#' function \code{DANGERsearchDS}. Only argument to be specified is datasouces.
 #' ds.DANGERsearch is currently classified
 #' as a DANGER function. This is because it is primarily of value to developers
 #' and for other users to be proactively presented with the names of all of the serverside 

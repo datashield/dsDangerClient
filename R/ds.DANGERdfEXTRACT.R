@@ -1,6 +1,22 @@
-#'
+#' @title DANGER function returning data.frame (df) from processing servers to
+#' clientside - *** DEPRECATED BY ds.DANGERdmtEXTRACT *** 
+#' @description Copies a df from data servers to clientside. 
+#' @details *** DEPRECATED BY ds.DANGERdmtEXTRACT ***
+#' @param dataframeName character string that specifies the name of the df 
+#' to be copied from the serverside to the clientside 
+#' @param extract.study.specific logical defaulted to TRUE which means that the
+#' df from each processing source will be combined and returned as a single object.
+#' If FALSE this will not be returned. If the <extract.study.specific> and the
+#' <extract.all.studies.combined> arguments are both TRUE separate and
+#' combined dmts will be returned.
+#' @param extract.all.studies.combined  logical defaulted to TRUE which means that the
+#' dfs from each processing source will be returned as a separate object. If FALSE
+#' these will not be returned
+#' @param datasources specifies the particular 'connection object(s)' to use.
+#' @return the serverside df specified by name dfName as a
+#' data.frame/matrix/tibble on the clientside.
+#' @author DataSHIELD Development Team
 #' @export
-#'
 ds.DANGERdfEXTRACT<-function(dataframeName=NULL, extract.study.specific=TRUE, extract.all.studies.combined=TRUE, datasources=NULL) {
 
   # details are provided look for 'opal' objects in the environment

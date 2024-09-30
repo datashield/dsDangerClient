@@ -17,7 +17,7 @@ the R object in its original form.}
 Because every server should have the same parser, regardless which connection object(s)
 you choose to use, this argument is not really important for this function. If
 you wish to know more about this argument please see help for another clientside
-function (e.g. the {ds.ls} function.}
+function (e.g. the \code{ds.ls} function.}
 }
 \value{
 information about whether the input object/string gets blocked or passed
@@ -30,8 +30,8 @@ and determines whether it is passed by the parser and, if so, what form it
 takes after it has traversed the parser.
 }
 \details{
-Clientside function {ds.DANGERpassPARSER} calling serverside aggregate function
-{DANGERpassPARSERDS} which presents an R object or character string to the DataSHIELD R parser
+Clientside function \code{ds.DANGERpassPARSER} calling serverside aggregate function
+\code{DANGERpassPARSERDS} which presents an R object or character string to the DataSHIELD R parser
 and determines whether it is passed or blocked by the parser. If it passes,
 it then explores what form it
 takes after it has traversed the parser. If it is blocked by the parser the call to
